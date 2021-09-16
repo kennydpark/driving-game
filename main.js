@@ -17,6 +17,11 @@ function keyPress(event) {
   }
   if (event.key === ' ') {
     setInterval(moveCar, 16);
+    var intervalID = setInterval(moveCar, 16);
+    // console.log(intervalID);
+    if (intervalID) {
+      clearInterval(intervalID);
+    }
   }
 }
 
@@ -33,3 +38,6 @@ var data = {
     y: ''
   }
 };
+
+// clearInterval(intervalID);
+// intervalID = false;
