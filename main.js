@@ -31,13 +31,6 @@ function keyPress(event) {
       clearInterval(intervalID);
       intervalID = undefined;
     }
-    // intervalID = setInterval(moveCar, 16);
-    // setInterval(moveCar, 16);
-    // var intervalID = setInterval(moveCar, 16);
-    // console.log(intervalID);
-    // if (intervalID) {
-    //   clearInterval(intervalID);
-    // }
   }
 }
 
@@ -54,7 +47,3 @@ var data = {
     y: ''
   }
 };
-
-// function startInterval () {
-//   if (intervalID === undefined)
-// }
