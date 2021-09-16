@@ -5,4 +5,22 @@ body {
 img {
   height: 100px;
   width: auto;
+  transition-duration: 0.3s;
+  -o-transition-property: transform;
+}
+
+.S {
+  transform: rotate(90deg);
+}
+
+.W {
+  transform: rotate(180deg);
+}
+
+.N {
+  transform: rotate(-90deg);
+}
+
+.E {
+  transform: rotate(0deg);
 }
