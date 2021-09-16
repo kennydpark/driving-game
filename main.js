@@ -30,15 +30,30 @@ function keyPress(event) {
 }
 
 var leftValue = 5;
+var topValue = 5;
 function moveCar() {
-  imageStyle.left = leftValue + 'px';
-  leftValue += 5;
+  if ($imgElement.className === 'E') {
+    imageStyle.left = leftValue + 'px';
+    leftValue += 5;
+  } else if ($imgElement.className === 'S') {
+    imageStyle.top = topValue + 'px';
+    topValue += 5;
+  } else if ($imgElement.className === 'W') {
+    imageStyle.left = leftValue + 'px';
+    leftValue -= 5;
+  } else if ($imgElement.className === 'N') {
+    imageStyle.top = topValue + 'px';
+    topValue -= 5;
+  }
+
+  data.location.x = leftValue;
+  data.location.y = topValue;
 }
 
 var data = {
   carDirection: null,
   location: {
-    x: '',
-    y: ''
+    x: imageStyle.left,
+    y: imageStyle.top
   }
 };
