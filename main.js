@@ -1,5 +1,6 @@
 var $imgElement = document.querySelector('img');
 var imageStyle = $imgElement.style;
+var intervalID;
 window.addEventListener('keydown', keyPress);
 function keyPress(event) {
   if (event.key === 'ArrowDown') {
@@ -16,12 +17,19 @@ function keyPress(event) {
     data.carDirection = 'E';
   }
   if (event.key === ' ') {
-    setInterval(moveCar, 16);
-    var intervalID = setInterval(moveCar, 16);
-    // console.log(intervalID);
-    if (intervalID) {
+    if (!intervalID) {
+      intervalID = setInterval(moveCar, 16);
+    } else {
       clearInterval(intervalID);
+      intervalID = undefined;
     }
+    // intervalID = setInterval(moveCar, 16);
+    // setInterval(moveCar, 16);
+    // var intervalID = setInterval(moveCar, 16);
+    // console.log(intervalID);
+    // if (intervalID) {
+    //   clearInterval(intervalID);
+    // }
   }
 }
 
@@ -39,5 +47,6 @@ var data = {
   }
 };
 
-// clearInterval(intervalID);
-// intervalID = false;
+// function startInterval () {
+//   if (intervalID === undefined)
+// }
