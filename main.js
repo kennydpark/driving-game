@@ -1,4 +1,5 @@
 var $imgElement = document.querySelector('img');
+var imageStyle = $imgElement.style;
 window.addEventListener('keydown', keyPress);
 function keyPress(event) {
   if (event.key === 'ArrowDown') {
@@ -14,8 +15,21 @@ function keyPress(event) {
     $imgElement.className = 'E';
     data.carDirection = 'E';
   }
+  if (event.key === ' ') {
+    setInterval(moveCar, 16);
+  }
+}
+
+var leftValue = 5;
+function moveCar() {
+  imageStyle.left = leftValue + 'px';
+  leftValue += 5;
 }
 
 var data = {
-  carDirection: null
+  carDirection: null,
+  location: {
+    x: '',
+    y: ''
+  }
 };

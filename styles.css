@@ -7,6 +7,8 @@ img {
   width: auto;
   transition-duration: 0.3s;
   -o-transition-property: transform;
+  position: absolute;
+  left: 5px;
 }
 
 .S {
