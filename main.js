@@ -1,6 +1,5 @@
 var $imgElement = document.querySelector('img');
 var imageStyle = $imgElement.style;
-// var intervalID = setInterval(moveCar, 16);
 window.addEventListener('keydown', keyPress);
 function keyPress(event) {
   if (event.key === 'ArrowDown') {
