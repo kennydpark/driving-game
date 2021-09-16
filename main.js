@@ -6,17 +6,25 @@ function keyPress(event) {
   if (event.key === 'ArrowDown') {
     $imgElement.className = 'S';
     data.carDirection = 'S';
+    imageStyle['transition-duration'] = '0.3s';
   } else if (event.key === 'ArrowLeft') {
     $imgElement.className = 'W';
     data.carDirection = 'W';
+    imageStyle['transition-duration'] = '0.3s';
+
   } else if (event.key === 'ArrowUp') {
     $imgElement.className = 'N';
     data.carDirection = 'N';
+    imageStyle['transition-duration'] = '0.3s';
+
   } else if (event.key === 'ArrowRight') {
     $imgElement.className = 'E';
     data.carDirection = 'E';
+    imageStyle['transition-duration'] = '0.3s';
+
   }
   if (event.key === ' ') {
+    imageStyle['transition-duration'] = '0s';
     if (!intervalID) {
       intervalID = setInterval(moveCar, 16);
     } else {
