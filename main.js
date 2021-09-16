@@ -1,6 +1,6 @@
 var $imgElement = document.querySelector('img');
-window.addEventListener('keydown', keyPress);
-function keyPress(event) {
+window.addEventListener('keydown', arrowKey);
+function arrowKey(event) {
   if (event.key === 'ArrowDown') {
     $imgElement.className = 'S';
     data.carDirection = 'S';
@@ -16,6 +16,15 @@ function keyPress(event) {
   }
 }
 
+window.addEventListener('keydown', spaceBar);
+function spaceBar(event) {
+
+}
+
 var data = {
-  carDirection: null
+  carDirection: null,
+  location: {
+    x: '',
+    y: ''
+  }
 };
