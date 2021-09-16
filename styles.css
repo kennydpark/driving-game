@@ -5,20 +5,22 @@ body {
 img {
   height: 100px;
   width: auto;
+  transition-duration: 0.3s;
+  -o-transition-property: transform;
 }
 
-.turn-down {
+.S {
   transform: rotate(90deg);
 }
 
-.turn-left {
+.W {
   transform: rotate(180deg);
 }
 
-.turn-up {
+.N {
   transform: rotate(-90deg);
 }
 
-.turn-right {
+.E {
   transform: rotate(0deg);
 }
