@@ -9,6 +9,7 @@ img {
   transition-property: transform;
   position: absolute;
   left: 5px;
+  top: 5px;
 }
 
 .S {
