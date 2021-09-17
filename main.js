@@ -29,27 +29,6 @@ function keyPress(event) {
   }
 }
 
-var leftValue = 5;
-var topValue = 5;
-function moveCar() {
-  if ($imgElement.className === 'E') {
-    imageStyle.left = leftValue + 'px';
-    leftValue += 5;
-  } else if ($imgElement.className === 'S') {
-    imageStyle.top = topValue + 'px';
-    topValue += 5;
-  } else if ($imgElement.className === 'W') {
-    imageStyle.left = leftValue + 'px';
-    leftValue -= 5;
-  } else if ($imgElement.className === 'N') {
-    imageStyle.top = topValue + 'px';
-    topValue -= 5;
-  }
-
-  data.location.x = leftValue;
-  data.location.y = topValue;
-}
-
 var data = {
   carDirection: null,
   location: {
@@ -57,3 +36,21 @@ var data = {
     y: imageStyle.top
   }
 };
+
+data.location.x = 5;
+data.location.y = 5;
+function moveCar() {
+  if ($imgElement.className === 'E') {
+    imageStyle.left = data.location.x + 'px';
+    data.location.x += 5;
+  } else if ($imgElement.className === 'S') {
+    imageStyle.top = data.location.y + 'px';
+    data.location.y += 5;
+  } else if ($imgElement.className === 'W') {
+    imageStyle.left = data.location.x + 'px';
+    data.location.x -= 5;
+  } else if ($imgElement.className === 'N') {
+    imageStyle.top = data.location.y + 'px';
+    data.location.y -= 5;
+  }
+}
